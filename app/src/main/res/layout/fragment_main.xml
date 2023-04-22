@@ -26,7 +26,7 @@
         android:contentDescription="Search!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="361dp"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="20dp"
         android:height="48dp"
@@ -175,7 +175,7 @@
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
+        android:layout_marginStart="302dp"
         android:layout_marginTop="110dp"
         android:layout_marginEnd="25dp"
         android:ellipsize="none"
@@ -195,17 +195,30 @@
         app:rippleColor="@color/nav_bar_whitegray"
         app:strokeColor="@color/orange_primary" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_news" />
+
     <ProgressBar
         android:id="@+id/pag_progress_bar"
+        style="@android:style/Widget.Holo.ProgressBar.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="?attr/progressBarStyle"
-        android:visibility="invisible"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="200dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintEnd_toEndOf = "parent"
-        app:layout_constraintHprizontal_bias="0.5"
-        />
+        android:progressDrawable="@color/orange_primary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </FrameLayout>
