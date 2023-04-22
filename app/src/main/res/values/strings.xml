@@ -1,5 +1,14 @@
 <resources>
+
     <string name="app_name">NewsApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="News">Новости</string>
+    <string name="Recom">Рекомендации</string>
+    <string name="Sport">Спорт</string>
+    <string name="Polit">Политика</string>
+    <string name="Scince">Наука и технология</string>
+    <string name="Last_News">Последние Новости</string>
+    <string name="More">Подробнее</string>
+
 </resources>
