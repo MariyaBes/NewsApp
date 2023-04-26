@@ -3,7 +3,6 @@ package com.example.newsapp.ui.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +10,6 @@ import com.bumptech.glide.Glide
 import com.example.newsapp.R
 import com.example.newsapp.models.Article
 import kotlinx.android.synthetic.main.item_article.view.*
-import org.jetbrains.annotations.NotNull
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder> () {
 
@@ -39,7 +37,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder> () {
         return differ.currentList.size
     }
 
-
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val article = differ.currentList[position]
 
@@ -49,9 +46,12 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder> () {
             article_title.text = article.title
             article_desc.text = article.author
             article_date.text = article.publishedAt
+
+            setOnClickListener {
+                onItemClickListener?.let { it(article) }
+            }
         }
     }
-
     private var onItemClickListener: ((Article) -> Unit)? = null
 
     fun setOnItemClickListener(listener: (Article) -> Unit) {

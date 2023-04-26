@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".ui.account.AccountFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/title_acc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/prompt_semibold"
+        android:text="@string/Account"
+        android:textAlignment="center"
+        android:textColor="@color/nav_bar_darkgray"
+        android:textSize="16sp" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="266dp"
+        android:background="@drawable/usertick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="384dp"
+        android:fontFamily="@font/prompt_bold"
+        android:text="@string/Not_acc"
+        android:textAlignment="center"
+        android:textColor="@color/nav_bar_darkgray"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@+id/title_acc" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="419dp"
+        android:fontFamily="@font/play_regular"
+        android:text="@string/text_acc"
+        android:textAlignment="center"
+        android:textColor="@color/text_dt"
+        android:textSize="14sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="484dp"
+        android:width="110dp"
+        android:height="30dp"
+        android:fontFamily="@font/prompt_semibold"
+        android:text="@string/LogIn"
+        android:textAllCaps="false"
+        android:textColor="@color/white_text"
+        android:textSize="12sp"
+        app:cornerRadius="5dp"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="6dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white_text"
+        android:fontFamily="@font/prompt_semibold"
+        android:text="@string/SignIn"
+        android:textAlignment="center"
+        android:textColor="@color/orange_primary"
+        android:textSize="12sp"
+        android:layout_marginTop="484dp"
+        android:layout_marginStart="200dp"
+        app:cornerRadius="5dp" />
 </FrameLayout>
