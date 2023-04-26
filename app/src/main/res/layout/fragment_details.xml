@@ -3,12 +3,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.details.DetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_cart"
         android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/not_available" />
+
+            <ImageView
+                android:id="@+id/icon_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="265dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/arrowleft"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/icon_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="330dp"
+                android:layout_marginTop="265dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/share"
+                android:backgroundTint="#FFFFFF"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+            <ImageView
+                android:id="@+id/icon_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="268dp"
+                android:layout_marginTop="265dp"
+                android:layout_marginEnd="54dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/archiveadd"
+                android:backgroundTint="@color/white"
+                android:minWidth="40dp"
+                android:minHeight="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/HeadLines"
+        android:fontFamily="@font/prompt_bold"
+        android:textSize="20sp"
+        android:maxLines="3"
+        android:layout_marginTop="260dp"
+        android:textColor="@color/nav_bar_darkgray"
+        />
+
+    <TextView
+        android:id="@+id/detail_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/play_regular"
+        android:textSize="10sp"
+        android:text="@string/Manufacture"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/text_dt"
+        android:layout_marginTop="360dp"
+        />
+
+    <TextView
+        android:id="@+id/detail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Date"
+        android:fontFamily="@font/play_regular"
+        android:textColor="@color/text_dt"
+        android:textSize="10sp"
+        android:layout_marginTop="376dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf = "@+id/detail_author"
+        />
+
+    <TextView
+        android:id="@+id/detail_description"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/Description"
+        android:fontFamily="@font/prompt_medium"
+        android:textSize="16sp"
+        android:textColor="@color/nav_bar_darkgray"
+        android:layout_marginTop="400dp"
+        />
+
+    <Button
+        android:id="@+id/see_all"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="140dp"
+        android:ellipsize="none"
+        android:fontFamily="@font/play_regular"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:maxWidth="90dp"
+        android:minHeight="48dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:text="@string/More"
+        android:textAlignment="center"
+        android:textColor="@color/orange_primary"
+        android:textSize="16sp"
+        app:cornerRadius="5dp"
+        app:iconPadding="0dp"
+        app:rippleColor="@color/nav_bar_whitegray"
+        app:strokeColor="@color/orange_primary" />
 
 </FrameLayout>

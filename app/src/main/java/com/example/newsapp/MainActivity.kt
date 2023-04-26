@@ -1,22 +1,13 @@
 package com.example.newsapp
 
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import androidx.navigation.fragment.findNavController
-//import androidx.navigation.ui.setupWithNavController
-//import com.example.newsapp.databinding.ActivityMainBinding
-//import dagger.hilt.android.AndroidEntryPoint
-//import kotlinx.android.synthetic.main.activity_main.*
-//import kotlinx.coroutines.CoroutineScope
-//import kotlinx.coroutines.Dispatchers
-//import kotlinx.coroutines.delay
-//import kotlinx.coroutines.launch
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 import com.example.newsapp.databinding.ActivityMainBinding
+import com.example.newsapp.ui.search.SearchFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             )
         }
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

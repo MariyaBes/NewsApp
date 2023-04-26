@@ -10,5 +10,16 @@
     <string name="Scince">Наука и технология</string>
     <string name="Last_News">Последние Новости</string>
     <string name="More">Подробнее</string>
+    <string name="Search">Поиск </string>
+    <string name="TypeSpace">Введите запрос</string>
+    <string name="Account">Личный профиль</string>
+    <string name="Not_acc">Аккаунта нет</string>
+    <string name="text_acc">Вы не вошли в учетную запись. Выполните авторизацию, либо зарегистрируйтесь.</string>
+    <string name="LogIn">Авторизация</string>
+    <string name="SignIn">Регистрация</string>
+    <string name="HeadLines">Обзор Hisense U8HQ Mini-LED: современный и яркий телевизор для фильмов и игр за разумные деньги</string>
+    <string name="Manufacture">Промо</string>
+    <string name="Date"> 29 марта, 2023</string>
+    <string name="Description">Новинка Hisense может похвастаться целым набором флагманских характеристик и технологий. Разбираемся в особенностях модели и рассказываем, чем она интересна.</string>
 
 </resources>
