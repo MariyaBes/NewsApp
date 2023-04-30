@@ -5,10 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".ui.favorite.FavoriteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fontFamily="@font/prompt_semibold"
+        android:text="Избранное"
+        android:textAlignment="center"
+        android:textColor="@color/nav_bar_darkgray"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_2"
+        android:layout_marginTop="65dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Недавно сохраненные"
+        android:fontFamily="@font/play_regular"
+        android:textColor="@color/text_dt"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSavedNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="105dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        />
 
 </FrameLayout>
