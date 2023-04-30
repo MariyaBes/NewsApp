@@ -15,6 +15,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.newsapp.R
 import com.example.newsapp.databinding.FragmentDetailsBinding
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -69,6 +70,9 @@ class DetailsFragment : Fragment() {
             }
             mBinding.iconFav.setOnClickListener {
                 viewModel.saveFavoriteArticle(article)
+                Snackbar.make(view, "Статья успешно сохранена!", Snackbar.LENGTH_LONG).apply {
+                    show()
+                }
             }
         }
     }

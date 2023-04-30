@@ -17,5 +17,5 @@ interface ArticleDao {
     suspend fun insert(article: Article)
 
     @Delete
-    suspend fun delete(article: Article)
+    fun delete(article: Article)
 }
