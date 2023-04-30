@@ -8,21 +8,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapp.R
+import com.example.newsapp.data.api.NewsRepository
+import com.example.newsapp.data.api.NewsService
 import com.example.newsapp.databinding.FragmentMainBinding
 import com.example.newsapp.ui.adapters.NewsAdapter
 import com.example.newsapp.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_main.*
 
-
 @AndroidEntryPoint
 class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val mBinding get() = _binding!!
-
     private val viewModel by viewModels<MainViewModel>()
     lateinit var newsAdapter: NewsAdapter
 
@@ -46,6 +47,30 @@ class MainFragment : Fragment() {
             )
         }
 
+        recom_butt.setOnClickListener{
+            viewModel.getCategory("entertainment")
+        }
+
+        recom_butt3.setOnClickListener{
+            viewModel.getCategory("sports")
+        }
+
+        recom_butt4.setOnClickListener{
+            viewModel.getCategory("business")
+        }
+
+        recom_butt5.setOnClickListener{
+            viewModel.getCategory("science")
+        }
+
+        recom_butt6.setOnClickListener{
+            viewModel.getCategory("technology")
+        }
+
+        recom_butt7.setOnClickListener{
+            viewModel.getCategory("health")
+        }
+
         viewModel.newsLiveData.observe(viewLifecycleOwner) { responce ->
             when(responce){
                 is Resource.Success -> {
@@ -67,6 +92,8 @@ class MainFragment : Fragment() {
         }
     }
 
+
+
     private fun initAdapter(){
         newsAdapter = NewsAdapter()
         news_adapter.apply {
@@ -75,3 +102,4 @@ class MainFragment : Fragment() {
         }
     }
 }
+

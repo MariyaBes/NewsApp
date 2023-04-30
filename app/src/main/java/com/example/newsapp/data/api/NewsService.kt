@@ -18,6 +18,7 @@ interface NewsService {
     @GET("/v2/top-headlines")
     suspend fun getHeadlines(
         @Query("country") countryCode: String = "us",
+        @Query("category") category: String = "general",
 //        @Query("sources") sources: String = "bbc-news",
         @Query("page") page: Int = 1,
         @Query("apiKey") apiKey: String = API_KEY

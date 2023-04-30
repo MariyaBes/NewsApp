@@ -4,10 +4,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="News">Новости</string>
-    <string name="Recom">Рекомендации</string>
+    <string name="Bussines">Бизнес</string>
+    <string name="Rec">Рекомендации</string>
     <string name="Sport">Спорт</string>
-    <string name="Polit">Политика</string>
-    <string name="Scince">Наука и технология</string>
+    <string name="science">Наука</string>
+    <string name="health">Здоровье</string>
+    <string name="Scince">Наука</string>
+    <string name="technology">Технологии</string>
     <string name="Last_News">Последние Новости</string>
     <string name="More">Подробнее</string>
     <string name="Search">Поиск </string>
